@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class Movimiento : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Rigidbody rb;
+
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(Vector2.right * 500, ForceMode.Force);
     }
 }
